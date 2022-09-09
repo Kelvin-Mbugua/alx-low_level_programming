@@ -1,41 +1,44 @@
 #include <stdio.h>
 
-/**
- *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
- *Return: Always 0 (Success)
- */
-
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int i, j, k, l;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
+	i = j = k = 48; l = 49;
+	while  ((i < 58))
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		putchar(i); putchar(j); putchar(32); putchar(k); putchar(l);
+		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
 		{
-			for (t = tens; t <= '9'; t++) /*print second of pair*/
+			putchar('\n'); i++;
+		}
+		else
+		{
+			putchar(44); putchar(32);
+			if ((k == 57) && (l == 57))
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				if (j < 56)
 				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(t);
-					putchar(o);
-					if (!((tens == '9' && ones == '8') &&
-								(t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					l = ++j + 1; k = i;
 				}
-				o = '0';
+				else if (j == 56)
+				{
+					j++; k = i + 1; l = 48;
+				}
+				else if (j == 57)
+				{
+					j = 48; l = 49; k = ++i;
+				}
+			}
+			else if (l < 57)
+			{
+				l++;
+			}
+			else
+			{
+				l = 48; k++;
 			}
 		}
 	}
-	putchar('\n');
-		return (0);
+	return (0);
 }
