@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - prints hexadecimal base 0123456789abcdef, using putchar
+ *main - prints all the numbers of base 16 in lowercase, followed by a new line.
  *Return: Always 0 (Success)
  */
 
