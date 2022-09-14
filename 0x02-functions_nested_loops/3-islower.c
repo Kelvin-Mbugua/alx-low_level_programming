@@ -5,9 +5,9 @@
  *
  * Return: 1 if character is lowercase, 0 otherwise.
  */
-int _islower(int c)
+int _islower(int r)
 {
-    int c;
+    int r;
 
     r = _islower('H');
     putchar(r + '0');
