@@ -1,5 +1,5 @@
-#include "stduo.h"
 #include "main.h"
+_putchar('\n');
 
 /**
  * _islower - Checks if a character is lowercase.
@@ -13,5 +13,5 @@ int _islower(int c)
 		return (1);
 	else
 		return (0);
-	printf('\n');
+	_putchar('\n');
 }
