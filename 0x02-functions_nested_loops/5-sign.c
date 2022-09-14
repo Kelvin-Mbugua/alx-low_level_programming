@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stdio.h"
 
 /**
  * print_sign - Prints the sign of a number.
@@ -10,6 +9,7 @@
  *         -1 if the number is less than zero.
  */
 int print_sign(int n)
+
 {
 	if (n > 0)
 	{
