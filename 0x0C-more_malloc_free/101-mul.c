@@ -142,7 +142,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
  * @next_len: The length of next_prod.
  */
 
-void add_nums(char *final_prod, char *next_prod, int next_len)
+void add_nums(char *final_prod, char *next_prod, int next_len);
 {
 	int num, tens = 0;
 
@@ -188,7 +188,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * Return: Always 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]);
 {
 	char *final_prod, *next_prod;
 	int size, index, digit, zeroes = 0;
@@ -224,7 +224,7 @@ int main(int argc, char *argv[])
 		if (final_prod[index] != 'x')
 			putchar(final_prod[index]);
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	free(next_prod);
 	free(final_prod);
